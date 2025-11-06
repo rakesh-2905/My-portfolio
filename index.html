@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rakesh Choudhary — Portfolio</title>
+  <style>
+    :root{
+      --bg1:#f0f9ff; --bg2:#fef6ff; --accent:#0077b6; --accent2:#ff006e; --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+      --maxw:1100px;
+      --radius:14px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg,var(--bg1), #cbebff 40%, var(--bg2));
+      color:#05204a; -webkit-font-smoothing:antialiased; padding:30px;
+      text-align: justify; /* Justified alignment for all content */
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto}
+
+    /* Header */
+    header{
+      background: linear-gradient(90deg,#00b4d8,#0096c7);
+      padding:22px; border-radius:18px; color:white; display:flex; align-items:center; gap:20px;
+      box-shadow: 0 8px 30px rgba(3,37,65,0.12);
+      text-align: left; /* Keep header content aligned left */
+    }
+    .intro{flex:1}
+    .intro h1{font-size:2rem; letter-spacing:0.6px}
+    .intro p{opacity:0.95}
+    .profile{
+      width:110px; height:110px; border-radius:50%; overflow:hidden; border:4px solid rgba(255,255,255,0.18);
+      box-shadow:0 6px 18px rgba(2,9,23,0.25);
+      flex-shrink:0;
+    }
+    .profile img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Social tab */
+    .social-tab{
+      margin-top:14px; display:flex; gap:10px; align-items:center; flex-wrap:wrap
+    }
+    .social-tab a{
+      background:rgba(255,255,255,0.12); color:white; text-decoration:none; padding:8px 12px; border-radius:10px;
+      display:inline-flex; gap:8px; align-items:center; font-weight:600; transition:transform .18s, background .18s;
+    }
+    .social-tab a:hover{transform:translateY(-4px); background:rgba(255,255,255,0.18)}
+
+    /* Main sections */
+    main{margin-top:26px; display:grid; grid-template-columns: 1fr 360px; gap:22px}
+    section.card{background:var(--card); padding:18px; border-radius:var(--radius); box-shadow:0 8px 20px rgba(7,24,46,0.06)}
+
+    /* Left column content */
+    .about h2,.projects h2,.education h2,.certs h2{color:var(--accent); margin-bottom:12px; text-align: left;}
+    .about p{margin-bottom:10px}
+
+    /* Projects */
+    .projects .project{padding:12px;border-radius:12px;margin-bottom:12px;background:linear-gradient(180deg,#fff,#fbfdff);border-left:6px solid var(--accent);display:flex;gap:12px;align-items:center}
+    .projects .project .emoji{font-size:24px}
+    .projects .project h3{margin-bottom:4px; text-align: left;}
+
+    /* Right column (sidebar) */
+    .contact .field{display:flex;gap:10px;align-items:center;padding:10px;border-radius:10px;background:linear-gradient(180deg,rgba(2,9,23,0.03),rgba(2,9,23,0.02));margin-bottom:10px}
+    .contact .field strong{min-width:80px}
+
+    /* Education Table */
+    .education table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .education th, .education td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid rgba(3,37,65,0.08);
+    }
+    .education th {
+        background-color: #f7fbff;
+        font-weight: 700;
+        color: var(--accent);
+    }
+     .education tr:last-child td {
+        border-bottom: none;
+    }
+
+    /* Certifications */
+    .certs ul{list-style:none}
+    .certs li{padding:10px;border-radius:10px;margin-bottom:8px;background:linear-gradient(90deg,#fff,#f7fbff);display:flex;gap:10px;align-items:center;border:1px solid rgba(3,37,65,0.04); text-align: left;}
+
+    /* Footer */
+    footer{margin-top:18px;text-align:center;color:#053058; opacity:0.9}
+
+    /* Responsive */
+    @media (max-width:880px){main{grid-template-columns:1fr} .profile{width:90px;height:90px}}
+
+    /* small badges */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#ffe6f0,#ffd6e8);color:var(--accent2);font-weight:700;border:1px solid rgba(255,0,110,0.08)}
+
+    /* floating fixed social icons (optional) */
+    .fixed-social{position:fixed; right:18px; bottom:18px; display:flex; flex-direction:column; gap:8px}
+    .fixed-social a{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#fff,#f2f9ff);display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 20px rgba(3,37,65,0.08)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="intro">
+        <h1>Rakesh Choudhary</h1>
+        <p>B.Tech CSE — 3rd Year · Pimpri Chinchwad University</p>
+        <div class="social-tab" aria-label="social links">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          <a href="https://github.com/rakesh-2905" target="_blank" rel="noopener">🐙 GitHub</a>
+          <a href="mailto:rakeshpune2005@gmail.com">✉️ Email</a>
+          <a href="#projects">📁 Projects</a>
+        </div>
+      </div>
+      <div class="profile" title="Rakesh Choudhary">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQF2MJuQK02mUw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695224613879?e=1761177600&v=beta&t=9z4CHaL8hyRl3S2rkMPmiY3-YKRwiHk0Rz7PgY4iars" alt="Rakesh Choudhary profile photo">
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section class="card about">
+          <h2>About Me</h2>
+          <p>Hello — I'm <strong>Rakesh Choudhary</strong>, a 3rd year B.Tech Computer Science student based in Chinchwad, Pune. I build small projects to learn full-stack development, embedded systems, and applied AI.</p>
+          <p><span class="badge">Beginner · Learner</span> Comfortable with C, C++, Python, basic electronics & Arduino.</p>
+        </section>
+
+        <section id="projects" class="card projects" style="margin-top:16px">
+          <h2>Projects</h2>
+
+          <div class="project">
+            <div class="emoji">🍽️</div>
+            <div>
+              <h3>Recipe Generator</h3>
+              <p>Generates recipe suggestions from given ingredients — built with HTML/CSS/JS logic for learning UX and algorithms.</p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="emoji">🤖</div>
+            <div>
+              <h3>Arduino 4WD — Automatic Sensing Car</h3>
+              <p>Arduino Uno based 4WD car with ultrasonic obstacle detection, soil sensor and water pump control for prototype automation.</p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="emoji">💬</div>
+            <div>
+              <h3>Medical Chatbot</h3>
+              <p>A simple rule-based chatbot that provides basic medical guidance and FAQs — created as a proof-of-concept for healthcare assistance.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card education" style="margin-top:16px">
+          <h2>Education</h2>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Qualification</th>
+                      <th>Institution</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td><strong>10th</strong></td>
+                      <td>SNBP International School, Morwadi, Chinchwad</td>
+                  </tr>
+                  <tr>
+                      <td><strong>12th</strong></td>
+                      <td>DY Patil</td>
+                  </tr>
+                  <tr>
+                      <td><strong>B.Tech (CSE)</strong></td>
+                      <td>Pimpri Chinchwad University — 3rd Year</td>
+                  </tr>
+              </tbody>
+          </table>
+        </section>
+
+        <section class="card certs" style="margin-top:16px">
+          <h2>Certifications</h2>
+          <ul>
+            <li>
+              <div style="flex:1">
+                <strong>Coursera — Python Course</strong>
+                <div style="font-size:13px;opacity:0.8">Introductory / specialization course on Python (certificate available)</div>
+              </div>
+            </li>
+            <li>
+              <div style="flex:1">
+                <strong>Red Hat — (Python-related course)</strong>
+                <div style="font-size:13px;opacity:0.8">Completed Red Hat training / certification on Python fundamentals</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+
+      <aside>
+        <section class="card contact">
+          <h2>Contact</h2>
+          <div class="field"><strong>Email</strong><span>rakeshpune2005@gmail.com</span></div>
+          <div class="field"><strong>Location</strong><span>Chinchwad, Pune, Maharashtra</span></div>
+          <div class="field"><strong>University</strong><span>Pimpri Chinchwad University</span></div>
+          <div class="field"><strong>Availability</strong><span>Open to internships & college projects</span></div>
+        </section>
+
+        <section class="card" style="margin-top:14px">
+          <h2>Quick Links</h2>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px">
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" style="text-decoration:none;padding:10px;border-radius:10px;background:linear-gradient(90deg,#fff,#fbfdff);display:block;text-align:center;font-weight:700;color:#023e8a">LinkedIn</a>
+            <a href="https://github.com/rakesh-2905" target="_blank" rel="noopener" style="text-decoration:none;padding:10px;border-radius:10px;background:linear-gradient(90deg,#fff,#fbfdff);display:block;text-align:center;font-weight:700;color:#023e8a">GitHub</a>
+            <a href="mailto:rakeshpune2005@gmail.com" style="text-decoration:none;padding:10px;border-radius:10px;background:linear-gradient(90deg,#fff,#fbfdff);display:block;text-align:center;font-weight:700;color:#023e8a">Email Me</a>
+          </div>
+        </section>
+
+      </aside>
+    </main>
+
+    <footer>
+      <small>© 2025 Rakesh Choudhary • Built for college showcase</small>
+    </footer>
+  </div>
+
+  <div class="fixed-social" aria-hidden="true">
+    <a href="https://www.linkedin.com/" target="_blank" rel="noopener">in</a>
+    <a href="https://github.com/rakesh-2905" target="_blank" rel="noopener">gh</a>
+  </div>
+</body>
+</html>
